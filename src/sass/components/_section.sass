@@ -1,0 +1,59 @@
+.section
+	background-position: 50% 50%
+	background-repeat: no-repeat
+	background-size: cover
+	position: relative
+	&__inner
+		height: 100%
+	&__bg-img
+		width: 100%
+		height: 100%
+		object-fit: cover
+		position: absolute
+		top: 0
+		left: 0
+		z-index: -5
+.top-lines
+	position: absolute
+	z-index: 0
+	top: 30%
+
+	&:before, &:after
+		content: ''
+		position: absolute
+		
+		width: 4000px
+		height: 1px
+		background: $red5
+	&:before
+		left: 0
+		transform: translateX(-100%)
+	&:after
+		right: 0
+		transform: translateX(100%)
+	&--red
+		&:before, &:after
+			background: $red2
+	&--full
+		&:before
+			left: 50%
+		&:after
+			right: 50%
+.section-content
+	height: 100%
+	position: relative
+	&__head
+		text-align: center
+	&__head-img
+		display: inline-block
+		vertical-align: top
+		position: relative
+		font-size: 0
+		img
+			width: auto
+			height: 20vh
+			position: relative
+			z-index: 2
+
+
+

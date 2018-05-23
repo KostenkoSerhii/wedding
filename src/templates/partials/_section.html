@@ -1,0 +1,17 @@
+<!--begin section-->
+<div class="section {{item.sectionMode}}" >
+	{% if item.bgImg %} 
+	<img class="section__bg-img" src="img/{{item.bgImg}}" alt="alt" >
+	{% endif %}
+	<!--begin section__inner-->
+	<div class="section__inner">
+		<!--begin l-->
+		<div class="l">
+			{% include item.path %}
+		</div>
+		<!--end l-->
+	</div>
+	<!--end section__inner-->
+
+</div>
+<!--end section-->

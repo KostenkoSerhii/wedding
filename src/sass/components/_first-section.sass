@@ -1,0 +1,52 @@
+.first-section
+	&__left
+		width: percentage(488/1140)
+	&__right
+		width: percentage(650/1140)
+		padding-right: 100px
+		text-align: right
+		padding-top: 7vh
+		+lg
+			padding-right: 150px
+	&__we-img
+		// position: absolute
+		// bottom: 0
+		// width: percentage(539/1140)
+		font-size: 0
+		// +lg
+		// 	left: 8vw
+		text-align: right
+		img
+			height: 77vh
+			// max-width: 100%
+
+			max-height: 779px
+	
+	&__decor-text
+		background-repeat: no-repeat
+		background-position: 50% 50%
+		background-size: contain
+		display: inline-block
+		vertical-align: top
+		height: 172px
+		// height: 16vh
+		line-height: 172px
+		padding: 0 120px
+		position: relative
+		+lg
+			padding: 0 80px
+		&:before, &:after
+			content: ''
+			position: absolute
+			height: 2px
+			width: 80px
+			background: $red3
+			top: 50%
+			transform: translateY(-50%)
+			+lg
+				width: 60px
+		&:before
+			left: 0
+		&:after
+			right: 0
+

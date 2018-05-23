@@ -1,0 +1,28 @@
+---
+title: Index page
+sections: [
+{
+	path: 'partials/_section-first.html',
+	sectionMode: '',
+	bgImg: 'fs-bg.jpg'
+},
+{
+	path: 'partials/_section-second.html',
+	sectionMode: ''
+}
+
+]
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+<!--begin section-wrapper js-section-wrapper-->
+<div class="section-wrapper js-section-wrapper">
+	{% for item in sections %}
+	{% include 'partials/_section.html' %}
+	{% endfor %}
+</div>
+<!--end section-wrapper js-section-wrapper-->
+
+{% endblock %}
