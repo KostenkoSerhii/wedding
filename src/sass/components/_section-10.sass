@@ -1,0 +1,30 @@
+.section-10
+	&__inner
+		display: flex
+		font-size: 0
+		justify-content: center
+	&__left
+		margin-right: 160px
+	&__right
+		flex-basis: 250px
+	&__left, &__right
+		flex-basis: 250px
+		.title-m
+			text-align: left
+		a
+			color: $gray
+
+	.section-content__inner
+		padding-top: 8vh
+		+sh
+			padding-top: 4vh
+	.title-m
+		+sh
+			margin-bottom: 40px
+		+rh(700)
+			margin-bottom: 20px!important
+.contact-block
+	&__l
+		margin-bottom: 30px
+		&:last-of-type
+			margin-bottom: 0

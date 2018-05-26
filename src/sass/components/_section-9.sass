@@ -1,0 +1,76 @@
+.section-9
+	&__inner
+		display: flex
+		font-size: 0
+	&__left
+		flex-basis: 50%
+		padding-right: 15px
+		text-align: right
+	&__right
+		flex-basis: 50%
+		padding-left: 15px
+	&__after-title
+		font-size: 24px
+		text-align: center
+		margin-bottom: 4vh
+
+	.l
+		height: auto
+		+sh
+			max-width: 940px
+	.title-m
+		margin-bottom: 1vh
+.field
+	border: 1px solid #fcbe95
+	background: $white
+	margin-bottom: 30px
+	+dh
+		margin-bottom: 20px
+	+sh
+		margin-bottom: 10px
+	+trans
+	&.is-error
+		border-color: $red2
+	&--textarea
+		textarea
+			height: 136px
+			+dh
+				height: 110px
+			+mh
+				height: 94px
+			+sh
+				height: 84px
+
+	input, textarea
+		color: $gray
+		padding: 18px 18px
+		+rob
+		display: block
+		width: 100%
+		border: none
+		text-align: left
+		+dh
+			padding:  14px 14px
+		+mh
+			padding:  10px 14px
+	textarea
+		resize: none
+.btn-submit
+	display: inline-block
+	vertical-align: top
+	color: #fdfdfd
+	+rob
+	font-size: 24px
+	background-color: $red2
+	border: 1px solid $red3
+	padding: 13px 15px
+	min-width: 262px
+	text-align: center
+	+trans
+	+mh
+		padding: 8px 15px
+		min-width: 200px
+		font-size: 20px
+	&:hover
+		background: $white
+		color: $red2

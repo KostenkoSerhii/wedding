@@ -12,7 +12,8 @@ export default function fullpageInit() {
   	'page6',
   	'page7',
   	'page8',
-  	'page9'
+  	'page9',
+  	'page10'
   	],
   	// lockAnchors: true
   });
