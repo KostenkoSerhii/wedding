@@ -1,0 +1,110 @@
+.section-4
+	&__inner
+		padding-top: 8vh
+		display: flex
+		justify-content: space-between
+		align-items: center
+		+mh
+			padding-top: 7vh
+		
+
+	&__inner, .nav-slider-wrapper
+		+mh
+			max-width: 1000px
+			margin: 0 auto
+	&__left
+		// width: percentage(585/1140)
+		width: 570px
+		+mh
+			width: 440px
+	&__right
+		// width: percentage(500/1140)
+		width: calc(100% - 654px)
+		+mh
+			width: calc(100% - 500px)
+.slick-slide
+	display: inline-block
+	vertical-align: top
+.main-slider
+	font-size: 0
+	float: left
+	overflow: hidden
+	width: 100%
+	&__slide
+		height: 490px
+		padding: 2px
+		position: relative
+		display: inline-block
+		vertical-align: top
+		+mh
+			height: 400px
+		&:before, &:after
+			content: ''
+			position: absolute
+			width: 100px
+			height: 100px
+			background: $red2
+			z-index: 0
+		&:before
+			right: 0
+			top: 0
+		&:after
+			bottom: 0
+			left: 0
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+			position: relative
+			z-index: 1
+.nav-slider-wrapper
+	text-align: right
+.nav-slider
+	position: relative
+	z-index: 1
+	top: -40px
+	display: inline-block
+	vertical-align: top
+	+sh
+		top: -60px
+	&__slide
+		width: 160px!important
+		height: 160px
+		cursor: pointer
+		+sh
+			width: 90px!important
+			height: 90px
+		+lgh
+			width: 130px!important
+			height: 130px
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+	.slick-list
+		padding: 0!important
+	.slick-slide
+		width: 185px!important
+		+sh
+			width: 105px!important
+		+lgh
+			width: 145px!important
+.decor-vert
+	color: $gray
+	font-size: 24px
+	font-weight: 300
+	position: relative
+	margin-bottom: 30px
+	+lg
+		font-size: 3vh
+	&:before, &:after
+		content: ''
+		position: absolute
+		left: 0
+		width: 68px
+		height: 1px
+		background-color: $red2
+	&:before
+		top: -20px
+	&:after
+		bottom: -20px

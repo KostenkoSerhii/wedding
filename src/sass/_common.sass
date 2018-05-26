@@ -26,14 +26,23 @@ a
 	text-decoration: none
 h1,h2,h3,h4,h5,h6
 	font-weight: normal
-.title-lg
+.title-lg, .title-m, .title-sm
 	color: #df0327
 	+roca
+.title-lg
 	font-size: 10vh
+.title-m
+	font-size: 60px
+	margin-bottom: 45px
+.title-sm
+	font-size: 40px
+	+sh
+		font-size: 28px
 .decor-text
 	color: $purple
 	// font-size: 10vh
 	font-size: 30px
+	text-align: center
 	&--half-cirle
 		min-width: 540px
 		height: 170px
@@ -68,5 +77,58 @@ h1,h2,h3,h4,h5,h6
 		height: 100%
 .article
 	color: $gray
+	font-size: 3vh
 	p
 		margin-bottom: 2vh
+.decor-block
+	border-top: 2px solid $red2
+	border-bottom: 2px solid $red2
+	padding: 9px 0
+	&__inner
+		background-position: 50% 50%
+		background-size: cover
+		background-repeat: no-repeat
+.why-block
+	max-width: 490px
+	.title-m
+		text-align: center
+.quote
+	position: relative
+	color: $gray
+	font-size: 24px
+	font-weight: 300
+	padding-left: 57px
+	&:before
+		content: ''
+		position: absolute
+		left: 0
+		top: 0
+		+s(quote-img)
+.justify-content
+	display: flex
+	align-items: flex-start
+	justify-content: space-between
+.link-under
+	color: $gray
+	font-size: 20px
+	+trans
+	display: inline-block
+	vertical-align: top
+	position: relative
+	&:after
+		+rmin(1024)
+			content: ''
+			position: absolute
+			width: 100%
+			bottom: 0px
+			height: 1px
+			background: $gray
+			left: 0
+			+trans
+	&:hover
+		+rmin(1024)
+			color: $red2
+			&:after
+				opacity: 0
+
+

@@ -1,0 +1,64 @@
+---
+title: Index page
+sections: [
+{
+	path: 'partials/_section-1.html',
+	sectionMode: '',
+	bgImg: 'fs-bg.jpg'
+},
+{
+	path: 'partials/_section-2.html',
+	sectionMode: '',
+	bgImg: 'bg-figure.jpg'
+},
+{
+	path: 'partials/_section-3.html',
+	sectionMode: '',
+	bgImg: 'sec-3.jpg'
+},
+{
+	path: 'partials/_section-4.html',
+	sectionMode: '',
+	bgImg: 'bg-figure.jpg'
+}
+
+]
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+					{% set mainSlider = 
+						[
+						{
+							img: 'main-s-img-1.jpg'
+						},
+						{
+							img: 'main-s-img-1.jpg'
+						},
+						{
+							img: 'main-s-img-1.jpg'
+						},
+						{
+							img: 'main-s-img-1.jpg'
+						},
+						{
+							img: 'main-s-img-1.jpg'
+						}
+						]
+
+						%}
+						<!--begin main-slider-wrapper-->
+						<div class="main-slider-wrapper">
+							<!--begin main-slider-->
+							<div class="main-slider js-main-slider">
+								{% for item in mainSlider %}
+								<div class="main-slider__slide">
+									<img src="img/{{item.img}}" alt="wedding">
+								</div>
+								{% endfor %}
+							</div>
+							<!--end main-slider-->
+						</div>
+						<!--end main-slider-wrapper-->
+{% endblock %}

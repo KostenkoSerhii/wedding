@@ -1,0 +1,76 @@
+<div class="section-content section-content--bottom-line section-4">
+	<div class="section-content__head">
+		<div class="section-content__head-img ">
+			<div class="decor-text decor-text--half-cirle" style="background-image: url('img/decor-circle-half.png')">KOSTENKO&OBORSKA
+				<div class="top-lines "></div>
+			</div>
+			
+		</div>
+	</div>
+	<div class="section-content__inner">
+		<!--begin l-->
+		<div class="l">
+			<!--begin section-4__inner-->
+			<div class="section-4__inner">
+				<!--begin section-4__left-->
+				<div class="section-4__left">
+					{% set mainSlider = 
+						[
+						{
+							img: 'main-s-img-1.jpg'
+						},
+						{
+							img: 'main-s-img-1.jpg'
+						},
+						{
+							img: 'main-s-img-1.jpg'
+						},
+						{
+							img: 'main-s-img-1.jpg'
+						},
+						{
+							img: 'main-s-img-1.jpg'
+						}
+						]
+
+						%}
+						<!--begin main-slider-->
+						<div class="main-slider js-main-slider">
+							{% for item in mainSlider %}
+							<div class="main-slider__slide">
+								<img src="img/{{item.img}}" alt="wedding">
+							</div>
+							{% endfor %}
+						</div>
+						<!--end main-slider-->
+
+
+
+					</div>
+					<!--end section-4__left-->
+					<!--begin section-4__right-->
+					<div class="section-4__right">
+						<div class="decor-vert">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit 
+						</div>
+					</div>
+					<!--end section-4__right-->
+				</div>
+				<!--end section-4__inner-->
+				<div class="nav-slider-wrapper">
+					<div class="nav-slider js-nav-slider">
+
+						{% for item in mainSlider %}
+						<div class="nav-slider__slide">
+							<img src="img/{{item.img}}" alt="wedding">
+						</div>
+						{% endfor %}
+					</div>	
+				</div>
+
+
+			</div>
+			<!--end l-->
+
+		</div>
+	</div>

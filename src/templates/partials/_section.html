@@ -3,13 +3,12 @@
 	{% if item.bgImg %} 
 	<img class="section__bg-img" src="img/{{item.bgImg}}" alt="alt" >
 	{% endif %}
+	{% if item.bgImgMain %} 
+	<img class="section__bg-main {{item.bgImgMainMode}}" src="img/{{item.bgImgMain}}" alt="alt" >
+	{% endif %}
 	<!--begin section__inner-->
 	<div class="section__inner">
-		<!--begin l-->
-		<div class="l">
-			{% include item.path %}
-		</div>
-		<!--end l-->
+		{% include item.path %}
 	</div>
 	<!--end section__inner-->
 
