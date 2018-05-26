@@ -2,17 +2,26 @@
 	&__inner
 		display: flex
 		font-size: 0
+		+sm
+			display: block
 	&__left
 		flex-basis: 50%
 		padding-right: 15px
 		text-align: right
+		+sm
+			padding-right: 0
 	&__right
 		flex-basis: 50%
 		padding-left: 15px
+		+sm
+			padding-left: 0
 	&__after-title
 		font-size: 24px
 		text-align: center
 		margin-bottom: 4vh
+		+sm
+			font-size: 16px
+			margin-bottom: 30px
 
 	.l
 		height: auto
@@ -20,6 +29,8 @@
 			max-width: 940px
 	.title-m
 		margin-bottom: 1vh
+		+m
+			margin-bottom: 10px
 .field
 	border: 1px solid #fcbe95
 	background: $white
@@ -33,13 +44,13 @@
 		border-color: $red2
 	&--textarea
 		textarea
-			height: 136px
+			height: 138px
 			+dh
 				height: 110px
 			+mh
 				height: 94px
 			+sh
-				height: 84px
+				height: 86px
 
 	input, textarea
 		color: $gray
@@ -49,10 +60,14 @@
 		width: 100%
 		border: none
 		text-align: left
+		font-size: 14px
 		+dh
 			padding:  14px 14px
 		+mh
 			padding:  10px 14px
+		+sm
+			padding: 6px 
+			font-size: 12px
 	textarea
 		resize: none
 .btn-submit

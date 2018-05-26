@@ -6,22 +6,36 @@
 		align-items: center
 		+mh
 			padding-top: 7vh
-		
+		+m
+			padding-top: 0
+			margin-bottom: 15px
+		+xs
+			flex-wrap: wrap
 
 	&__inner, .nav-slider-wrapper
 		+mh
 			max-width: 1000px
 			margin: 0 auto
 	&__left
-		// width: percentage(585/1140)
 		width: 570px
 		+mh
 			width: 440px
+		+xs
+			margin: 0 auto
+			order: 1
+		+r(500)
+			width: 280px!important
 	&__right
-		// width: percentage(500/1140)
 		width: calc(100% - 654px)
 		+mh
 			width: calc(100% - 500px)
+		+m
+			width: calc(100% - 470px)
+		+xs
+			order: 0
+			flex-basis: 100%
+
+
 .slick-slide
 	display: inline-block
 	vertical-align: top
@@ -38,6 +52,8 @@
 		vertical-align: top
 		+mh
 			height: 400px
+		+xs
+			height: 280px!important
 		&:before, &:after
 			content: ''
 			position: absolute
@@ -59,6 +75,11 @@
 			z-index: 1
 .nav-slider-wrapper
 	text-align: right
+	+m
+		text-align: left
+	+xs
+		text-align: center
+		display: none
 .nav-slider
 	position: relative
 	z-index: 1
@@ -67,6 +88,14 @@
 	vertical-align: top
 	+sh
 		top: -60px
+	+m
+		top: 0!important
+		margin-bottom: 20px
+	+xs
+		text-align: center
+		display: inline-block
+		vertical-align: top
+		margin-bottom: 0
 	&__slide
 		width: 160px!important
 		height: 160px
@@ -81,30 +110,20 @@
 			width: 100%
 			height: 100%
 			object-fit: cover
+	.nav-slider__slide
+		+m
+			width: 70px!important
+			height: 70px
+
 	.slick-list
 		padding: 0!important
+		.slick-slide
+			+m
+				width: 85px!important
+				height: 85px
 	.slick-slide
 		width: 185px!important
 		+sh
 			width: 105px!important
 		+lgh
 			width: 145px!important
-.decor-vert
-	color: $gray
-	font-size: 24px
-	font-weight: 300
-	position: relative
-	margin-bottom: 30px
-	+lg
-		font-size: 3vh
-	&:before, &:after
-		content: ''
-		position: absolute
-		left: 0
-		width: 68px
-		height: 1px
-		background-color: $red2
-	&:before
-		top: -20px
-	&:after
-		bottom: -20px

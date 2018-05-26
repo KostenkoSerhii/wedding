@@ -6,7 +6,10 @@ import initSliders from './components/sliders.js';
 sayHello();
 
 $(document).ready(function() {
-  fullpageInit();
-  initSliders();
+  let windowWidth = $(window).width();
+  if(windowWidth > 1200) {
+    fullpageInit();
+  }
+  initSliders(windowWidth);
 
 });

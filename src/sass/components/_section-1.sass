@@ -1,12 +1,26 @@
 .first-section
+	+sm
+		margin-bottom: 30px
 	&__left
 		width: percentage(488/1140)
 		position: relative
+		+m
+			width: 330px
+		+sm
+			display: none
 	&__right
 		width: percentage(650/1140)
 		padding-right: 100px
 		text-align: right
 		padding-top: 7vh
+		+m
+			width: 600px
+			float: left
+			text-align: center
+		+sm
+			width: 100%
+			padding-right: 0
+			padding-top: 30px
 		// +lg
 		// 	padding-right: 150px
 	&__we-img
@@ -37,6 +51,11 @@
 		position: relative
 		+lg
 			padding: 0 80px
+		+m
+			display: block
+			padding: 0
+		+sm
+			font-size: 20px
 		&:before, &:after
 			content: ''
 			position: absolute
@@ -47,8 +66,18 @@
 			transform: translateY(-50%)
 			+lg
 				width: 60px
+			+m
+				width: 40px
+			+sm
+				display: none
 		&:before
 			left: 0
 		&:after
 			right: 0
-
+	.title-lg
+		br
+			+sm
+				display: none
+	.section-content__head
+		+m
+			display: block

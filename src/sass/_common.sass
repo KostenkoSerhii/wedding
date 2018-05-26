@@ -21,6 +21,9 @@ body
 	+rob
 	font-size: 2vh
 	overflow: hidden
+	+m
+		overflow: visible
+		font-size: 16px
 
 a
 	text-decoration: none
@@ -32,19 +35,29 @@ h1,h2,h3,h4,h5,h6
 
 .title-lg
 	font-size: 10vh
+	+sm
+		font-size: 40px
 .title-m
 	font-size: 60px
 	margin-bottom: 45px
 	text-align: center
+	+sm
+		font-size: 34px
+		margin-bottom: 20px
 .title-sm
 	font-size: 40px
 	+sh
 		font-size: 28px
+	+m
+		font-size: 24px
+		line-height: 1
 .decor-text
 	color: $purple
 	// font-size: 10vh
 	font-size: 30px
 	text-align: center
+	+m
+		display: none
 	&--half-cirle
 		min-width: 540px
 		height: 170px
@@ -56,9 +69,10 @@ h1,h2,h3,h4,h5,h6
 			background-size: contain
 			background-repeat: no-repeat
 			background-position: 50% 100%
-			font-size: 
 		.top-lines
 			top: 49%
+			// +m
+			// 	display: none
 			&:before
 				left: 65px
 				+lg
@@ -67,21 +81,57 @@ h1,h2,h3,h4,h5,h6
 				right: 65px
 				+lg
 					right: 120px
-
+.top-lines
+	position: absolute
+	z-index: 0
+	top: 30%
+	width: 100%
+	+m
+		display: none
+	&:before, &:after
+		content: ''
+		position: absolute
+		
+		width: 4000px
+		height: 1px
+		background: $red5
+	&:before
+		left: 0
+		transform: translateX(-100%)
+	&:after
+		right: 0
+		transform: translateX(100%)
+	&--red
+		&:before, &:after
+			background: $red2
+	&--full
+		&:before
+			left: 50%
+		&:after
+			right: 50%
 .two-col
 	height: 100%
 	+clr
 	&__left
 		float: left
 		height: 100%
+		+sm
+			float: none
 	&__right
 		float: right
 		height: 100%
+		+sm
+			float: none
 .article
 	color: $gray
 	font-size: 3vh
+	+sm
+		font-size: 16px
 	p
 		margin-bottom: 2vh
+		+sm
+			margin-bottom: 15px
+
 .decor-block
 	border-top: 2px solid $red2
 	border-bottom: 2px solid $red2
@@ -92,6 +142,8 @@ h1,h2,h3,h4,h5,h6
 		background-repeat: no-repeat
 .why-block
 	max-width: 490px
+	+m
+		max-width: 100%
 	.title-m
 		text-align: center
 .quote
@@ -100,12 +152,45 @@ h1,h2,h3,h4,h5,h6
 	font-size: 24px
 	font-weight: 300
 	padding-left: 57px
+	+sm
+		font-size: 16px
 	&:before
 		content: ''
 		position: absolute
 		left: 0
 		top: 0
 		+s(quote-img)
+.decor-vert
+	color: $gray
+	font-size: 24px
+	font-weight: 300
+	position: relative
+	margin-bottom: 30px
+	+lg
+		font-size: 3vh
+	+m
+		font-size: 16px
+	+xs
+		margin-bottom: 50px
+		padding: 10px 0
+	&:before, &:after
+		content: ''
+		position: absolute
+		left: 0
+		width: 68px
+		height: 1px
+		background-color: $red2
+		+xs
+			left: 50%
+			transform: translateX(-50%)
+	&:before
+		top: -20px
+		+xs
+			top: 0
+	&:after
+		bottom: -20px
+		+xs
+			bottom: 0
 .justify-content
 	display: flex
 	align-items: flex-start
@@ -117,6 +202,8 @@ h1,h2,h3,h4,h5,h6
 	display: inline-block
 	vertical-align: top
 	position: relative
+	+m
+		font-size: 16px
 	&:after
 		+rmin(1024)
 			content: ''

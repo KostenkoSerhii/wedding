@@ -13,10 +13,14 @@
 		top: 0
 		left: 0
 		z-index: -5
+		+m
+			display: none
 	&__bg-main
 		max-height: 95vh
 		position: absolute
 		bottom: 0
+		+m
+			display: none
 		&--left
 			left: 0
 		&--right
@@ -24,33 +28,17 @@
 		&--full-h
 			max-height: 100%
 			height: 100vh
-.top-lines
-	position: absolute
-	z-index: 0
-	top: 30%
-	width: 100%
-
-	&:before, &:after
-		content: ''
-		position: absolute
-		
-		width: 4000px
-		height: 1px
-		background: $red5
-	&:before
-		left: 0
-		transform: translateX(-100%)
-	&:after
-		right: 0
-		transform: translateX(100%)
-	&--red
-		&:before, &:after
-			background: $red2
-	&--full
-		&:before
-			left: 50%
-		&:after
-			right: 50%
+	&--hero
+			
+		+m
+			height: 100vh
+		+sm
+			height: auto
+		.section__bg-img
+			+m
+				display: block
+			+sm
+				display: none
 .section-content
 	height: 100%
 	position: relative
@@ -66,12 +54,16 @@
 			left: 0
 			bottom: 8vh
 			z-index: 19
+			+m
+				display: none
 
 	&__head
 		text-align: center
 
 		flex-grow: 0
 		width: 100%
+		+m
+			display: none
 	&__inner
 		flex-grow: 1
 		flex-basis: 100%

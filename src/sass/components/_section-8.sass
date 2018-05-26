@@ -2,20 +2,35 @@
 	&__inner
 		margin-bottom: 5vh
 		display: flex
-
+		+m
+			margin-bottom: 30px
+		+xs
+			display: block
 	&__left
 		flex-basis: 50%
 		padding-right: 70px
 		text-align: right
+		+m
+			padding-right: 20px
+		+xs
+			padding: 0
+			margin-bottom: 20px
+			text-align: left
 	&__right
 		flex-basis: 50%
 		padding-left: 70px
+		+m
+			padding-left: 20px
+		+xs
+			padding: 0
 		p
 			font-size: 20px
 			margin-bottom: 20px
 			+sh
 				font-size: 16px
 				margin-bottom: 15px
+			+m
+				margin-bottom: 10px
 	.title-m	
 		margin-bottom: 7vh
 		+mh
@@ -28,10 +43,14 @@
 		+sh
 			margin-bottom: 10px
 			max-width: 300px
+		+xs
+			margin: 0 0 10px
 		p
 			font-size: 24px
 			+sh
 				font-size: 20px
+			+m
+				font-size: 16px
 	.decor-block
 		&__inner
 			height: 25vh
