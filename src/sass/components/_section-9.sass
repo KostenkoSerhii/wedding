@@ -40,7 +40,7 @@
 	+sh
 		margin-bottom: 10px
 	+trans
-	&.is-error
+	&.error-field
 		border-color: $red2
 	&--textarea
 		textarea
@@ -88,5 +88,6 @@
 		font-size: 20px
 		margin-bottom: 20px
 	&:hover
-		background: $white
-		color: $red2
+		+rmin(1024)
+			background: $white
+			color: $red2

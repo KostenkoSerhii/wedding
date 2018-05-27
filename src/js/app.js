@@ -39,10 +39,10 @@ $(document).ready(function() {
       'tagLetter' : 'i',
       'stop' : false
     });
-    formSubmit();
-    popup();
-    gmap();
-  }
+  };
+  formSubmit();
+  popup();
+  gmap();
 
 
 });

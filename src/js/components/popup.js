@@ -1,14 +1,10 @@
 import PubSub from 'pubsub-js';
 function popup() {
-  $('.js-popup-link').on('click', openPopup );
-
-  function openPopup(e) {
+  $('.js-popup-link').on('click', function(e) {
     e.preventDefault();
     let $this = $(this),
       attr = $this.attr('data-popup'); 
     let target = $(`.js-popup[data-popup="${attr}"]`);
-
-
     target.fadeIn(300);
     $('body').addClass('is-hidden');
 
@@ -18,7 +14,7 @@ function popup() {
       PubSub.publish('open-map-popup');
     };  
 
-  };
+  });
 
   $('.js-popup-overlay, .js-close-popup').on('click', function() {
     $(this).parents('.js-popup').fadeOut(200);
@@ -28,6 +24,7 @@ function popup() {
   $('.js-popup-content').on('click', function(e) {
     e.stopPropagation();
   });
+
 
 
 };
