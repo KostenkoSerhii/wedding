@@ -44,6 +44,7 @@
 	float: left
 	overflow: hidden
 	width: 100%
+	position: relative
 	&__slide
 		height: 490px
 		padding: 2px
@@ -52,7 +53,7 @@
 		vertical-align: top
 		+mh
 			height: 400px
-		+xs
+		+r(500)
 			height: 280px!important
 		&:before, &:after
 			content: ''
@@ -127,3 +128,23 @@
 			width: 105px!important
 		+lgh
 			width: 145px!important
+.slick-arrow
+	font-size: 0
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
+	z-index: 2
+	svg
+		font-size: 30px
+		width: 30px
+		height: 30px
+		fill: $red2
+		+trans
+	&.slick-disabled
+		svg
+			fill: $gray
+
+	&.btn-prev 
+		left: 10px
+	&.btn-next
+		right: 10px

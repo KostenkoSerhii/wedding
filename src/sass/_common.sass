@@ -36,7 +36,7 @@ h1,h2,h3,h4,h5,h6
 .title-lg
 	font-size: 10vh
 	+sm
-		font-size: 40px
+		font-size: 36px
 .title-m
 	font-size: 60px
 	margin-bottom: 45px
@@ -154,12 +154,17 @@ h1,h2,h3,h4,h5,h6
 	padding-left: 57px
 	+sm
 		font-size: 16px
+	+xs
+		padding-left: 40px
 	&:before
 		content: ''
 		position: absolute
 		left: 0
 		top: 0
 		+s(quote-img)
+		+xs
+			top: 4px
+
 .decor-vert
 	color: $gray
 	font-size: 24px
@@ -205,7 +210,6 @@ h1,h2,h3,h4,h5,h6
 	+m
 		font-size: 16px
 	&:after
-		+rmin(1024)
 			content: ''
 			position: absolute
 			width: 100%
@@ -221,4 +225,31 @@ h1,h2,h3,h4,h5,h6
 				opacity: 0
 .centered
 	text-align: center
-
+.timer
+	color: $gray
+	display: inline-block
+	vertical-align: top
+	font-size: 0
+	padding: 8px	
+	border: 2px solid $red3
+	margin-bottom: 10px
+	+m
+		margin: 20px 0 30px
+	span
+		font-size: 24px
+		display: inline-block
+		vertical-align: top
+		margin-right: 8px
+		color: $red2
+		&:last-of-type
+			margin-right: 0
+		+sm	
+			font-size: 18px
+	i
+		font-style: normal
+		display: inline-block
+		vertical-align: top
+		margin-left: 2px
+		color: $gray
+.is-hidden
+	overflow: hidden
